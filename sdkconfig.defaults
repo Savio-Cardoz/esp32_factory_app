@@ -1,0 +1,11 @@
+# Enable GPIO trigger to boot into the Factory/Test partition
+CONFIG_BOOTLOADER_APP_TEST=y
+
+# Set the GPIO pin number connected to your button (e.g., GPIO 4)
+CONFIG_BOOTLOADER_NUM_PIN_APP_TEST=18
+
+# Define the active state (0 = Active Low / Pulled to Ground when pressed)
+CONFIG_BOOTLOADER_PIN_APP_TEST_STATE=0
+
+# (Optional) Require the button to be held for a short time to prevent noise triggers
+# CONFIG_BOOTLOADER_HOLD_TIME_GPIO=1
