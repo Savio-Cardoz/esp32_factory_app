@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string>
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -20,7 +19,6 @@ extern "C" void app_main(void)
     sd_config.pinD0 = GPIO_NUM_40;
 
     IFileSystem *sdcard = new SDCardManager(sd_config);
-    std::string fileContent;
 
     if (sdcard->mount())
     {

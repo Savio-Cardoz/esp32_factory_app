@@ -17,7 +17,7 @@ void perform_firmware_update()
     const esp_partition_t *update_partition = esp_partition_find_first(
         ESP_PARTITION_TYPE_APP,
         ESP_PARTITION_SUBTYPE_APP_OTA_0,
-        NULL);
+        nullptr);
 
     if (update_partition == nullptr)
     {
